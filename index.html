@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biometric testing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <!-- Form -->
+            <div class="form-container">
+                <div class="test-count" id="testCount">Training data entered: 1/10</div>
+
+                <!-- Card Type -->
+                <div class="form-group">
+                    <label class="group-label">Card Type:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="radio" id="visa" name="cardType" value="Visa">
+                            <label for="visa">Visa</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="radio" id="mastercard" name="cardType" value="MasterCard">
+                            <label for="mastercard">MasterCard</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="radio" id="amex" name="cardType" value="Amex">
+                            <label for="jcb">Amex</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="nameInput">Name:</label>
+                    <input type="text" id="nameInput" maxlength="21">
+                </div>
+
+                <!-- Card Number -->
+                <div class="form-group">
+                    <label for="numInput">Number:</label>
+                    <input type="text" id="numInput" maxlength="16">
+                </div>
+
+                <!-- CVC and Expiry -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cvcInput">CVC:</label>
+                        <input type="text" id="cvcInput" maxlength="3" class="input-short">
+                    </div>
+                    <div class="form-group">
+                        <label for="expMonth">Expiry:</label>
+                        <div class="expiry-group">
+                            <input type="text" id="expMonth" maxlength="2" placeholder="MM" class="input-expiry">
+                            <input type="text" id="expYear" maxlength="2" placeholder="YY" class="input-expiry">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="button-group">
+                    <button id="enterBtn" class="btn">Enter</button>
+                    <button id="resetBtn" class="btn">Reset</button>
+                </div>
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-section">
+                <!-- Instructions -->
+                <div class="info-panel">
+                    <h3>INSTRUCTIONS</h3>
+                    <p>Fill in the form with the card details given below. Do this 10 times to train the model.</p>
+                    <p>Once the model has been trained, you can test it.</p>
+                </div>
+
+                <!-- Card Details -->
+                <div class="info-panel">
+                    <h3>CARD DETAILS</h3>
+                    <p id="cardTypeDisplay">Card Type: Revolut</p>
+                    <p id="nameDisplay">Name: Mrs ABC Miller</p>
+                    <p id="numberDisplay">Number: 4422891459068728</p>
+                    <p id="cvcDisplay">CVC: 646</p>
+                    <p id="expiryDisplay">Expiry: 09/30</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
